@@ -1,1 +1,1 @@
-# PTUT-G-riatrie
+# PTUT-Gériatrie
