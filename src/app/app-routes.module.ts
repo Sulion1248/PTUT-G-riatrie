@@ -1,3 +1,4 @@
+import { GuardGuard } from './guard.guard';
 import { PatientComponent } from './patient/patient.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -7,9 +8,9 @@ import { ErreurComponent } from './erreur/erreur.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes = [
-  { path: 'identification', component: IdentificationComponent },
-  { path: 'service',        component: ServiceComponent },
-  { path: 'patient/:id',        component: PatientComponent },
+  { path: 'service', canActivate : [GuardGuard], component: ServiceComponent },
+  { path: 'patient/:id', canActivate : [GuardGuard], component: PatientComponent },
+  { path: 'identification',  component: IdentificationComponent },
   { path: '',   redirectTo: '/identification', pathMatch: 'full' },
   { path: '**', component: ErreurComponent }
 ];

@@ -1,3 +1,4 @@
+import { AppComponent } from './../app.component';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +10,16 @@ export class IdentificationComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  login() {
+    AppComponent.log = true;
   }
+
+  logout() {
+    AppComponent.log = false;
+  }
+
+  ngOnInit() {
+    this.logout();
+      }
 
 }
