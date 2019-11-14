@@ -1,0 +1,4 @@
+<p>service works!</p>
+<div *ngFor= 'let p of liste'>
+    <a [routerLink]="['/patient', p.id]">{{p.name}}</a>
+</div>
