@@ -7,6 +7,7 @@ import { ServiceComponent } from './service/service.component';
 import { ErreurComponent } from './erreur/erreur.component';
 import { AppRoutesModule } from './app-routes.module';
 import { FormsModule } from '@angular/forms';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FormsModule } from '@angular/forms';
     ErreurComponent,
     ServiceComponent,
     IdentificationComponent,
-    PatientComponent  ],
+    PatientComponent,
+    AdminComponent  ],
   imports: [
     BrowserModule,
     AppRoutesModule,

@@ -1,4 +1,4 @@
-import { AppComponent } from './app.component';
+import { AppComponent } from './../app.component';
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class GuardGuard implements CanActivate {
+export class AdminGuard implements CanActivate {
   constructor(private router: Router) {}
 
   canActivate(
@@ -15,7 +15,7 @@ export class GuardGuard implements CanActivate {
     return this.checkLogin();
   }
   checkLogin(): boolean {
-    if (AppComponent.log) { return true; } else {
+    if (AppComponent.logad) { return true; } else {
     this.router.navigate(['/identification']);
     return false;
   }}

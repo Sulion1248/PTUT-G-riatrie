@@ -1,5 +1,4 @@
 <p>identification works!</p>
-<input placeholder="utilisateur" id="user" [(ngModel)]="user">
-<input placeholder='password' type='password' id="password" [(ngModel)]="password"> 
+<input placeholder="utilisateur" (keyup)="onKey($event)" id="user" [(ngModel)]="user">
+<input placeholder='password' (keyup)="onKey($event)" type='password' id="password" [(ngModel)]="password"> 
 <button (click)=login() routerLink="/service" routerLinkActive="active" >confirmer</button>
-<a routerLink="/service" routerLinkActive="active">confirmer</a>

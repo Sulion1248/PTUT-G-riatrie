@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   static log ;
+  static logad;
   title = 'Geriatrie';
 }
