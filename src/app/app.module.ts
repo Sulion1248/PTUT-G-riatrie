@@ -6,6 +6,7 @@ import { IdentificationComponent } from './identification/identification.compone
 import { ServiceComponent } from './service/service.component';
 import { ErreurComponent } from './erreur/erreur.component';
 import { AppRoutesModule } from './app-routes.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { AppRoutesModule } from './app-routes.module';
   imports: [
     BrowserModule,
     AppRoutesModule,
-
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
