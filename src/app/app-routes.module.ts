@@ -18,9 +18,9 @@ const appRoutes: Routes = [
   { path: 'patient/:id', canActivate : [GuardGuard], component: PatientComponent },
   { path: 'identification',  component: IdentificationComponent },
   { path: '',   redirectTo: '/identification', pathMatch: 'full' },
-  {path:"gest-comptes",component:GestComptesComponent},
-  {path:"gest-logs",component:GestLogsComponent},
-  {path:"ajouter-user",component:AjouterUserComponent},
+  { path:'gest-comptes',component:GestComptesComponent},
+  { path:'gest-logs',component:GestLogsComponent},
+  { path:'ajouter-user',component:AjouterUserComponent},
   { path: '**', component: ErreurComponent }
 ];
 
