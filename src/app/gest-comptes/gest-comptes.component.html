@@ -1,0 +1,28 @@
+<html>   
+    <body>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+        <script type="text/javascript"></script>
+        <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+        <script src="http://code.angularjs.org/1.2.13/angular-animate.js"></script>
+
+        <button (click)="return()">Retour</button>
+        <table style="width:85%" center>
+            <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Identifiant</th>
+            <th>Mot de passe</th>
+            <th></th>
+            </tr>
+            <tr>
+            <td>Delacroix</td>
+            <td>Alexis</td>
+            <td>delacra</td>
+            <td>*****</td>
+            <td><div class="modify_user"><img src="../../assets/img/edit.png" width="50" ng-click="edit_user()"><img src="../../assets/img/cancel.png" width="50" ng-click="delete_user()"></div></td>
+            </tr>
+        </table> 
+        <button [routerLink]="['/ajouter-user']">Ajouter Utilisateur</button>
+
+    </body>
+</html>    

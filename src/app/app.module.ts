@@ -8,6 +8,9 @@ import { ErreurComponent } from './erreur/erreur.component';
 import { AppRoutesModule } from './app-routes.module';
 import { FormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
+import { GestComptesComponent } from './gest-comptes/gest-comptes.component';
+import { GestLogsComponent } from './gest-logs/gest-logs.component';
+import { AjouterUserComponent } from './ajouter-user/ajouter-user.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,11 @@ import { AdminComponent } from './admin/admin.component';
     ServiceComponent,
     IdentificationComponent,
     PatientComponent,
-    AdminComponent  ],
+    AdminComponent,
+    GestComptesComponent,
+    GestLogsComponent,
+    AjouterUserComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutesModule,

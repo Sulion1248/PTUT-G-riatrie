@@ -9,4 +9,6 @@ export class AppComponent {
   static log ;
   static logad;
   title = 'Geriatrie';
+
+
 }
