@@ -8,6 +8,9 @@ import { IdentificationComponent } from './identification/identification.compone
 import { ServiceComponent } from './service/service.component';
 import { ErreurComponent } from './erreur/erreur.component';
 import { RouterModule, Routes } from '@angular/router';
+import { GestComptesComponent } from './gest-comptes/gest-comptes.component';
+import { GestLogsComponent } from './gest-logs/gest-logs.component';
+import { AjouterUserComponent } from './ajouter-user/ajouter-user.component';
 
 const appRoutes: Routes = [
   { path: 'admin', canActivate : [AdminGuard], component: AdminComponent },
@@ -15,6 +18,9 @@ const appRoutes: Routes = [
   { path: 'patient/:id', canActivate : [GuardGuard], component: PatientComponent },
   { path: 'identification',  component: IdentificationComponent },
   { path: '',   redirectTo: '/identification', pathMatch: 'full' },
+  {path:"gest-comptes",component:GestComptesComponent},
+  {path:"gest-logs",component:GestLogsComponent},
+  {path:"ajouter-user",component:AjouterUserComponent},
   { path: '**', component: ErreurComponent }
 ];
 
