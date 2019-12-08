@@ -1,0 +1,51 @@
+ #oublie_mdp{
+    font-size: medium;
+    font-style: italic;
+  }
+  
+  #co{
+    background:  #3eaef8;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: -200px;
+    overflow: hidden;
+  }
+
+  #co2{
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 50px;
+    width: 30%;
+    background-color: white;
+    padding: 70px;
+    text-align: center;
+    border-radius: 30px;
+    position: absolute;
+  }
+  
+  #confirmerconnection{
+     background-color: green;
+     border-color: grey;
+  }
+
+  input{
+    border: 1px solid grey;
+    background-color: #3eaef8;
+    width: 50%;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin: 0 auto 10px auto;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    transition-duration: 0.25s;
+    font-weight: 300;
+  }
+
+  input:hover{
+    background-color: #7ed6df;
+  }

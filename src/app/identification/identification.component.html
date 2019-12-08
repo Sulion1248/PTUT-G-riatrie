@@ -1,3 +1,14 @@
-<input placeholder="utilisateur" (keyup)="onKey($event)" id="user" [(ngModel)]="user">
-<input placeholder='password' (keyup)="onKey($event)" type='password' id="password" [(ngModel)]="password"> 
-<button (click)=login() routerLink="/service" routerLinkActive="active" >confirmer</button>
+<div id="co">
+    <div id="co2">   
+        <input placeholder="utilisateur" (keyup)="onKey($event)" id="user" [(ngModel)]="user"><br><br>
+        <input placeholder='password' (keyup)="onKey($event)" type='password' id="password" [(ngModel)]="password"> <br>
+        <p id="oublie_mdp">
+        Mot de passe oublié? <br> Envoyez un mail à votre responsble.
+        </p>
+        <button (click)=login() routerLink="/service" routerLinkActive="active" id="confirmerconnection">confirmer</button>
+    </div>
+</div>
+
+
+    
+    
