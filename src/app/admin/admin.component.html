@@ -1,6 +1,14 @@
 <div class="admin">
-        <h1>Bienvenu Administrateur</h1>
-        <div style="text-align:center">
+        <div class="entete">
+                <img src="assets/img/manager.png" id="manager">
+                <h1>Bienvenu Administrateur</h1>
+                <div id="imgGauche">
+                        <img src="assets/img/bell.png" id="bell">
+                        <img src="assets/img/settings.png">
+                        <img src="assets/img/power-button.png">    
+                </div>
+        </div>
+        <div style="text-align:center" id="menu">
                 <button [routerLink]="['/gest-comptes']">Gestion des comptes</button><br>
                 <button [routerLink]="['/gest-logs']">Gestion des logs</button><br>
                 <button>Gestion des secteurs</button><br>
