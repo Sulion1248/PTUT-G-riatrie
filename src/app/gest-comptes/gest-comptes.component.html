@@ -4,8 +4,12 @@
         <script type="text/javascript"></script>
         <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
         <script src="http://code.angularjs.org/1.2.13/angular-animate.js"></script>
-
-        <button (click)="return()">Retour</button>
+        
+        <div class="return">
+            <img src="assets/img/back-arrow.png">
+            <button (click)="return()">Retour</button>
+        </div>
+        <div id="userTable">
         <table style="width:85%" center>
             <tr>
             <th>Nom</th>
@@ -19,9 +23,14 @@
             <td>Alexis</td>
             <td>delacra</td>
             <td>*****</td>
-            <td><div class="modify_user"><img src="../../assets/img/edit.png" width="50" ng-click="edit_user()"><img src="../../assets/img/cancel.png" width="50" ng-click="delete_user()"></div></td>
+            <td>
+            <div class="modify_user">
+                <img src="../../assets/img/cancel.png" class="imgTab">
+                <img src="../../assets/img/edit.png" class="imgTab">
+            </div></td>
             </tr>
         </table> 
+        </div>
         <button [routerLink]="['/ajouter-user']">Ajouter Utilisateur</button>
 
     </body>

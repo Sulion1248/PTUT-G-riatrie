@@ -10,5 +10,9 @@ export class AppComponent {
   static logad;
   title = 'Geriatrie';
 
+  titlebarre: string = 'Administrateur';
+  
+  constructor(){}
+
 
 }
