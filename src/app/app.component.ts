@@ -11,6 +11,10 @@ export class AppComponent {
   title = 'Geriatrie';
 
   titlebarre: string = 'Administrateur';
+
+  
+
+
   
   constructor(){}
 

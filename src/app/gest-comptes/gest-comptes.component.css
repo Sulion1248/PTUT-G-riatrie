@@ -12,18 +12,21 @@ img{
     width:50px;
     height:50px;
 }
-
-.return{
-    margin: 10px 10px 10px 10px ;
-}
-
 img.imgTab{
     float: right;
     margin: 15px 15px 15px 15px ;
 }
 
-img:hover{
+img:hover, p.retour:hover{
     cursor: pointer;
+}
+
+#imgretour{
+    margin: 15px 15px 0 15px ;
+}
+
+p.retour{
+    margin: 0 auto 0 20px ;
 }
 
 #userTable{
@@ -33,4 +36,26 @@ img:hover{
     padding-bottom: 20px;
     text-align: center;
     border-radius: 5px;
+  }
+
+ button{
+    margin: 20px auto 20px 20px;
+    background-color: white;
+    border:none;
+    padding: 5px 5px 5px 5px;
+    border-radius:8px;
+    font-size: large;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#ajouteruser{
+    background-color: rgb(25, 218, 134);
+}
+
+#ajouteruser:hover{
+    background-color: rgb(16, 190, 115);
+    color:white;
   }

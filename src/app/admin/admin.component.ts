@@ -14,8 +14,8 @@ export class AdminComponent implements OnInit {
   ngOnInit() {
   }
 
-  logoutFunction(){
-    
-  }
+
+
+  
 
 }
