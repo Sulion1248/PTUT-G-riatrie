@@ -1,4 +1,3 @@
-import { MDP } from './../MDP';
 import { AppComponent } from './../app.component';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';

@@ -1,4 +1,19 @@
 <p>patient works!</p>
-<div *ngIf="patient$ | async as patient">
-    <h3>"{{ patient.id }}"</h3>
-</div>
+<table>
+    <tr><th>Séjours actifs</th></tr>
+    <tr><th>Date de début</th><th>Date de fin</th><th>progression</th></tr>
+    <tr *ngFor="let s of liste[1]" [routerLink]="['/sejour', s[0]]">
+            <td>{{s[1].slice(0,10)}}</td>
+            <td>{{s[2].slice(0,10)}}</td>
+            <td>progression</td>
+        </tr>
+    <tr *ngIf="videactif"><td>pas de séjours actifs</td></tr>
+    <tr><th>Anciens séjours</th></tr>
+    <tr><th>Date de début</th><th>Date de fin</th><th>progression</th></tr>
+    <tr *ngFor="let s of liste[0]" [routerLink]="['/sejour', s[0]]">
+        <td>{{s[1].slice(0,10)}}</td>
+        <td>{{s[2].slice(0,10)}}</td>
+        <td>progression</td>
+    </tr>
+    <tr *ngIf="videancien"><td>pas d'ancien séjours</td></tr>
+</table>

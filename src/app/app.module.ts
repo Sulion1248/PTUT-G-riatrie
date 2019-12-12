@@ -10,6 +10,7 @@ import { ErreurComponent } from './erreur/erreur.component';
 import { AppRoutesModule } from './app-routes.module';
 import { FormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
+import { GrillesComponent } from './grilles/grilles.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AdminComponent } from './admin/admin.component';
     ServiceComponent,
     IdentificationComponent,
     PatientComponent,
-    AdminComponent  ],
+    AdminComponent,
+    GrillesComponent  ],
   imports: [
     BrowserModule,
     HttpClientModule,

@@ -5,5 +5,6 @@ var handle = {};
 handle["/"] = requestHandlers.utilisateur;
 handle["/utilisateur"] = requestHandlers.utilisateur;
 handle["/patients"] = requestHandlers.patients;
+handle["/sejours"] = requestHandlers.sejours;
 handle["error404"] = requestHandlers.error404;
 server.start(router.route,handle);

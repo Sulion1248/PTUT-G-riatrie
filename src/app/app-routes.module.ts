@@ -8,11 +8,13 @@ import { IdentificationComponent } from './identification/identification.compone
 import { ServiceComponent } from './service/service.component';
 import { ErreurComponent } from './erreur/erreur.component';
 import { RouterModule, Routes } from '@angular/router';
+import { GrillesComponent } from './grilles/grilles.component';
 
 const appRoutes: Routes = [
   { path: 'admin', canActivate : [AdminGuard], component: AdminComponent },
   { path: 'service', canActivate : [GuardGuard], component: ServiceComponent },
   { path: 'patient/:id', canActivate : [GuardGuard], component: PatientComponent },
+  { path: 'sejour/:id', canActivate : [GuardGuard], component: GrillesComponent },
   { path: 'identification',  component: IdentificationComponent },
   { path: '',   redirectTo: '/identification', pathMatch: 'full' },
   { path: '**', component: ErreurComponent }

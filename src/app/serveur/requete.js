@@ -18,7 +18,12 @@ function getpatient (param,res){
 }
 //permet d'obtenir tout les sejours d'un patient donné
 function getsejours(param,res){
-//todo
+  req="SELECT Sejour.idSejour, Sejour.DateDebut, Sejour.DateFin, Sejour.actif "+
+  "FROM Sejour "+
+  "where Sejour.Patient_idPatient=?";
+  console.log("requete : "+req)
+  var paramarray = [param];
+  reqsql.requetesql(req,paramarray,res); 
 }
 //permet d obtenir tout les patients avec un séjour actif
 function getpatients (res){
@@ -29,5 +34,6 @@ function getpatients (res){
   console.log("requete : "+req)
   reqsql.requetesqlsansparam(req,res); 
 }
+exports.getsejours=getsejours;
 exports.getuser=getuser;
 exports.getpatients=getpatients;
