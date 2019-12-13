@@ -11,6 +11,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { GestLogsComponent } from './gest-logs/gest-logs.component';
 import { GestComptesComponent } from './gest-comptes/gest-comptes.component';
 import { AjouterUserComponent } from './ajouter-user/ajouter-user.component';
+import { GrillesComponent } from './grilles/grilles.component';
 
 const appRoutes: Routes = [
   { path: 'admin', canActivate : [AdminGuard], component: AdminComponent },
@@ -19,6 +20,7 @@ const appRoutes: Routes = [
   {path:'gest-comptes', canActivate : [AdminGuard],component:GestComptesComponent},
   {path:'gest-logs', canActivate : [AdminGuard],component:GestLogsComponent},
   {path:'ajouter-user', canActivate : [AdminGuard],component:AjouterUserComponent},
+  { path: 'sejour/:id', canActivate : [GuardGuard], component: GrillesComponent },
   { path: 'identification',  component: IdentificationComponent },
   { path: '',   redirectTo: '/identification', pathMatch: 'full' },
   { path:'gest-comptes',component:GestComptesComponent},

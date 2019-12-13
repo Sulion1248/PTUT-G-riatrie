@@ -1,5 +1,22 @@
-<div *ngFor= 'let p of liste' >
-    <div *ngIf='p.service'>
-    <a [routerLink]="['/patient', p.id]">{{p.name}}</a>
-</div>
-</div>
+<div *ngIf='loading'>Loading</div>
+<table>
+    <tr>
+        <th>IPP</th>
+        <th>nom</th>
+        <th>prenom</th>
+        <th>nom de jeune fille</th>
+        <th>age</th>  
+        <th>date de début du séjour</th> 
+        <th>nom du secteur</th>     
+    </tr>
+    <tr *ngFor= 'let p of liste' [ngStyle]="{color:p[7]}" [routerLink]="['/patient', p[0]]">
+        <td>{{p[0]}}</td>
+        <td>{{p[1]}}</td>
+        <td>{{p[2]}}</td>
+        <td>{{p[3]}}</td>
+        <td>{{p[4]}}</td>
+        <td>{{p[5].slice(0,10)}}</td>
+        <td>Secteur : {{p[6]}}</td>
+    </tr>
+</table>
+<div *ngIf='vide'>Pas de patients dans le service</div>

@@ -1,5 +1,7 @@
+import { Requete } from './requete/requete';
 import { PatientComponent } from './patient/patient.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule} from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { IdentificationComponent } from './identification/identification.component';
@@ -11,6 +13,7 @@ import { AdminComponent } from './admin/admin.component';
 import { GestComptesComponent } from './gest-comptes/gest-comptes.component';
 import { GestLogsComponent } from './gest-logs/gest-logs.component';
 import { AjouterUserComponent } from './ajouter-user/ajouter-user.component';
+import { GrillesComponent } from './grilles/grilles.component';
 
 @NgModule({
   declarations: [
@@ -21,15 +24,17 @@ import { AjouterUserComponent } from './ajouter-user/ajouter-user.component';
     AjouterUserComponent,
     ErreurComponent,
     ServiceComponent,
-    IdentificationComponent,
-    PatientComponent ],
-    
+    IdentificationComponent,    
+    PatientComponent,
+    AdminComponent,
+    GrillesComponent  ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutesModule,
     FormsModule
   ],
-  providers: [],
+  providers: [Requete],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
