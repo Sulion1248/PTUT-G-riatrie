@@ -1,0 +1,48 @@
+h1{
+    margin: 30px auto auto 100px ;
+    float: left;
+
+}
+
+#manager{
+    float: left;
+    border: 1px solid grey;
+}
+
+img{
+    -webkit-border-radius:70px;
+    -moz-border-radius:70px;
+    border-radius:70px;
+    width:70px;
+    height:70px;
+    margin: 15px 15px auto 15px ;
+}
+
+#imgGauche{
+    float: right;
+    margin: 0 15px 15px auto ;
+}
+
+#menu{
+    clear: both;
+}
+
+button{
+    margin: 20px auto 20px auto;
+    background-color: white;
+    border:none;
+    padding:20px 20px 20px 20px;
+    border-radius:8px;
+    width: 400px;
+    font:bold;
+    font-size: large;
+}
+
+button:hover{
+    background-color:rgb(210, 231, 248);
+    cursor: pointer;
+}
+
+#first{
+    margin-top:50px;
+}

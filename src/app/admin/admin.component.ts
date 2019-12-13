@@ -8,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
+  titlebarre: string = 'Administrateur';
   constructor() { } 
 
   ngOnInit() {
   }
+
+
+
+  
 
 }

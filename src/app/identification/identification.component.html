@@ -1,4 +1,17 @@
-<p>identification works!</p>
-<input placeholder="utilisateur" (keyup)="onKey($event)" id="user" [(ngModel)]="user">
-<input placeholder='password' (keyup)="onKey($event)" type='password' id="password" [(ngModel)]="password"> 
-<button (click)=login() routerLink="/service" routerLinkActive="active" >confirmer</button>
+<div id="co">
+    <div id="co2">   
+        <img src="assets/img/doctor.png" id="doctor">
+        <input placeholder="utilisateur" (keyup)="onKey($event)" id="user" [(ngModel)]="user"><br><br>
+        <input placeholder='password' (keyup)="onKey($event)" type='password' id="password" [(ngModel)]="password"> <br>
+        <p class="erreurmdp">Identifiant ou Mot de Passe incorect !</p>
+        <p>Chargement...</p>
+        <p id="oublie_mdp">
+        Mot de passe oublié? <br> Prenez contact avec votre responsble.
+        </p>
+        <button (click)=login() routerLink="/service" routerLinkActive="active" id="confirmerconnection">CONFIRMER</button>
+    </div>
+</div>
+
+
+    
+    

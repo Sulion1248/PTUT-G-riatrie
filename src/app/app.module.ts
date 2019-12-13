@@ -15,15 +15,15 @@ import { AjouterUserComponent } from './ajouter-user/ajouter-user.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ErreurComponent,
-    ServiceComponent,
-    IdentificationComponent,
-    PatientComponent,
     AdminComponent,
     GestComptesComponent,
     GestLogsComponent,
-    AjouterUserComponent
-  ],
+    AjouterUserComponent,
+    ErreurComponent,
+    ServiceComponent,
+    IdentificationComponent,
+    PatientComponent ],
+    
   imports: [
     BrowserModule,
     AppRoutesModule,

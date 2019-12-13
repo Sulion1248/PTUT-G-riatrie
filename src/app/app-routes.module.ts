@@ -21,6 +21,9 @@ const appRoutes: Routes = [
   {path:'ajouter-user', canActivate : [AdminGuard],component:AjouterUserComponent},
   { path: 'identification',  component: IdentificationComponent },
   { path: '',   redirectTo: '/identification', pathMatch: 'full' },
+  { path:'gest-comptes',component:GestComptesComponent},
+  { path:'gest-logs',component:GestLogsComponent},
+  { path:'ajouter-user',component:AjouterUserComponent},
   { path: '**', component: ErreurComponent }
 ];
 
