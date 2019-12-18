@@ -1,5 +1,6 @@
 import { Requete } from './../requete/requete';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-service',
@@ -10,7 +11,8 @@ export class ServiceComponent implements OnInit {
   liste ;
   loading: boolean;
   vide = false;
-  constructor( private reqsql: Requete ) {
+  IPP: '';
+  constructor( private router: Router , private reqsql: Requete ) {
   }
 
   ngOnInit() {
@@ -26,4 +28,13 @@ export class ServiceComponent implements OnInit {
   });
   }
 
+  onKey(event: any) {
+    if (event.keyCode === 13) {
+      this.navigate()
+      ; }
+  }
+
+  navigate() {
+    this.router.navigate(['/patient/' + this.IPP]);
+  }
 }

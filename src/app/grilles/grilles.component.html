@@ -1,1 +1,75 @@
-<p>grilles works!</p>
+<p *ngIf='vide'>Pas de grille ADL pour ce patient</p>
+<p *ngIf='loading'>Loading...</p>
+<div *ngIf='vide === false'>
+<table>
+    <tr>
+        <td>Date de l'échelle ADL</td><td *ngFor='let p of grilles'>Date de prise de l'échelle : {{p[2]}}</td><td (onclick)='add()'>ajouter une grille</td>
+    </tr>
+    <tr>
+        <td>Conditions d'évaluation</td><td *ngFor='let p of grilles'><textarea [(ngModel)]="p[1]"></textarea></td>
+    </tr>
+    <tr>
+        <td>Hygiène<table>
+            <tr><td>Autonomie</td></tr>
+            <tr><td>Aide partielle</td></tr>
+            <tr><td>Dépendant</td></tr>
+        </table></td>
+        <td *ngFor='let p of grilles'>{{p[3]}}
+            <table><tr><td><button (onclick)='plus1(p[3])'>↑</button></td></tr>
+            <tr><td><button (onclick)='moins1(p[3])'>↓</button></td></tr></table></td>
+    </tr>
+    <tr>
+        <td>Habillage<table>
+            <tr><td>Autonome pour le choix des vêtements et l'habillage</td></tr>
+            <tr><td>Autonome pour le choix mais à besoin d'aide pour se changer</td></tr>
+            <tr><td>Dépendant</td></tr>
+        </table></td>
+        <td *ngFor='let p of grilles'>{{p[4]}}
+                <table><tr><td><button (onclick)='plus1(p[4])'>↑</button></td></tr>
+                <tr><td><button (onclick)='moins1(p[4])'>↓</button></td></tr></table></td>
+    </tr>
+    <tr>
+        <td>Aller aux Toilettes<table>
+            <tr><td>Autonomie pour y aller, se déshabiller et se rhabiller</td></tr>
+            <tr><td>Doit être accompagné ou a besoin d'aide pour se déshabiller ou se rhabiller</td></tr>
+            <tr><td>Ne peut pas y aller seul</td></tr>
+        </table></td>
+        <td *ngFor='let p of grilles'>{{p[5]}}
+                <table><tr><td><button (onclick)='plus1(p[5])'>↑</button></td></tr>
+                <tr><td><button (onclick)='moins1(p[5])'>↓</button></td></tr></table></td>
+    </tr>
+    <tr>
+        <td>Locomotion<table>
+            <tr><td>Autonomie</td></tr>
+            <tr><td>A besoin d'aide</td></tr>
+            <tr><td>Grabataire</td></tr>
+        </table></td>
+        <td *ngFor='let p of grilles'>{{p[6]}}
+                <table><tr><td><button (onclick)='plus1(p[6])'>↑</button></td></tr>
+                <tr><td><button (onclick)='moins1(p[6])'>↓</button></td></tr></table></td>
+    </tr>
+    <tr>
+        <td>Continence<table>
+            <tr><td>Continent</td></tr>
+            <tr><td>Incontinence occcasionnelle</td></tr>
+            <tr><td>Incontinent</td></tr>
+        </table></td>
+        <td *ngFor='let p of grilles'>{{p[7]}}
+                <table><tr><td><button (onclick)='plus1(p[7])'>↑</button></td></tr>
+                <tr><td><button (onclick)='moins1(p[7])'>↓</button></td></tr></table></td>
+    </tr>
+    <tr>
+        <td>Repas<table>
+            <tr><td>Mange seul</td></tr>
+            <tr><td>Aide pour le découpage</td></tr>
+            <tr><td>Dépendant</td></tr>
+        </table></td>
+        <td *ngFor='let p of grilles'>{{p[8]}}
+                <table><tr><td><button (onclick)='plus1(p[8])'>↑</button></td></tr>
+                <tr><td><button (onclick)='moins1(p[8])'>↓</button></td></tr></table></td>
+    </tr>
+    <tr><td>Score total</td><td *ngFor='let p of grilles'>{{p[3]+p[4]+p[5]+p[6]+p[7]+p[8]}}</td></tr>
+    <tr><td></td></tr><td *ngFor='let p of grilles'><button (onclick)='PutGrille(p)' >confirmer les changements</button></td>
+</table>
+<button (onclick)='PutSejour()'>Clore le séjour</button>
+</div>

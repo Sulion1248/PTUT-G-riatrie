@@ -11,6 +11,7 @@ export class Requete {
    private urlutilisateur = 'http://localhost:8080/utilisateur';
    private urlpatient = 'http://localhost:8080/patients';
    private urlsejour = 'http://localhost:8080/sejours';
+   private urlgrilles = 'http://localhost:8080/grilles';
    getUtilisateur(user) {
      const promise = new Promise((resolve, reject) => {
       this.http.get(this.urlutilisateur + '/' + user)
@@ -114,5 +115,37 @@ export class Requete {
            });
     return promise;
   }
-
+  getgrilles(idsejour) {
+    const promise = new Promise((resolve, reject) => {
+    this.http.get(this.urlgrilles + '/' + idsejour)
+    .toPromise()
+    .then(
+      grilles => {
+        if (grilles[0] === undefined) {
+            resolve('vide');
+        } else {
+          let i = -1;
+          const res = [];
+          while (grilles[i + 1] !== undefined ) {
+            i = i + 1;
+            res.push([
+            grilles[i].idGrilleADL,
+            grilles[i].Com,
+            grilles[i].DateEntre,
+            JSON.parse(grilles[i].patientJSON).dependanceHygiene,
+            JSON.parse(grilles[i].patientJSON).dependanceHabillage,
+            JSON.parse(grilles[i].patientJSON).dependanceToilette,
+            JSON.parse(grilles[i].patientJSON).dependanceContinence,
+            JSON.parse(grilles[i].patientJSON).dependanceLocomotion,
+            JSON.parse(grilles[i].patientJSON).dependanceRepas
+          ]);
+        }
+          resolve(res);
+      }},
+      msg => {
+        reject(msg);
+      });
+  });
+    return promise;
+  }
   }

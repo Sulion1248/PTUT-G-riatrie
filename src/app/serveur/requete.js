@@ -34,6 +34,13 @@ function getpatients (res){
   console.log("requete : "+req)
   reqsql.requetesqlsansparam(req,res); 
 }
+function getgrilles (){
+  req='Select Grilleadl.idGrilleADL, Grilleadl.AdlJSON, Grilleadl.Com,  Grilleadl.DateEntre'+
+  'FROM Grilleadl where Grilleadl.Sejour_idSejour=?';
+  console.log("requete : "+req);
+  reqsql.requetesql(req,paramarray,res); 
+}
 exports.getsejours=getsejours;
 exports.getuser=getuser;
 exports.getpatients=getpatients;
+exports.getgrilles=getgrilles;

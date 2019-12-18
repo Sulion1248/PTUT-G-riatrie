@@ -16,6 +16,21 @@ function utilisateur(res,param,meth){
         }
 }
 
+function grilles(res,param,meth){
+    if (meth==='GET'){
+        sql.getgrilles(param,res);
+    }
+    if (meth==='POST'){
+        sql.postgrilles(param,res);
+        }
+    if (meth==='PUT'){
+        sql.putgrilles(param,res);
+        }
+    if (meth==='DELETE'){
+        sql.delgrilles(param,res);
+        }
+}
+
 function patients(res,param,meth){
     if (meth==='GET'){
         sql.getpatients(res);
@@ -52,3 +67,4 @@ function grille(res,param){}
 exports.sejours = sejours;
 exports.utilisateur = utilisateur;
 exports.patients = patients;
+exports.grilles = grilles;
