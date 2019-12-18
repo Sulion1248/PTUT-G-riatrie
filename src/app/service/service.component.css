@@ -1,0 +1,53 @@
+table, th, tr{
+    margin: 10px auto 20px auto;
+    border-collapse: collapse;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+#loading{
+    clear: both;
+    margin: 10px auto 5px auto;
+    text-align: center;
+}
+
+td, th{
+    text-align: left;
+}
+
+.retour{
+    float: left;
+}
+
+img:hover, p.retour:hover{
+    cursor: pointer;
+}
+
+#imgretour{
+    width:50px;
+    height:50px;
+    margin: 15px 15px 0 15px ;
+}
+p.retour{
+    margin: 0 auto 0 20px ;
+}
+
+#recherche{
+    float: left;
+    margin: -20px auto 50px 100px;
+}
+
+#servicetable{
+    clear: both;
+    margin: 0 auto;
+    width: 85%;
+    background-color: white;
+    padding-bottom: 20px;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+tr:first-of-type {
+    background: grey;
+    font-weight: bold;
+    text-align: center;
+  }

@@ -1,13 +1,23 @@
-<table>
-    <tr><th>Séjours actifs</th></tr>
+<div class="return">
+    <img src="assets/img/back-arrow.png" (click)="return()" id="imgretour"><br>
+    <p class="retour" (click)="return()">Retour</p>
+</div>
+<div class="recherche">
+    <input placeholder="Recherche"  id="recherche">
+</div>
+<h1 id="actif">Séjour Actif</h1>
+<table id="actiftable">
     <tr><th>Date de début</th><th>Date de fin</th><th>progression</th></tr>
     <tr *ngFor="let s of liste[1]" [routerLink]="['/sejour', s[0]]">
             <td>{{s[1].slice(0,10)}}</td>
             <td>{{s[2].slice(0,10)}}</td>
             <td>progression</td>
-        </tr>
+    </tr>
     <tr *ngIf="videactif"><td>pas de séjours actifs</td></tr>
-    <tr><th>Anciens séjours</th></tr>
+</table>
+
+<h1 id="anciens">Anciens Séjours</h1>
+<table id="ancienstable">
     <tr><th>Date de début</th><th>Date de fin</th><th>progression</th></tr>
     <tr *ngFor="let s of liste[0]" [routerLink]="['/sejour', s[0]]">
         <td>{{s[1].slice(0,10)}}</td>

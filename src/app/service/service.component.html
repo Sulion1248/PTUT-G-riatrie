@@ -1,5 +1,13 @@
-<div *ngIf='loading'>Loading</div>
-<table>
+<div class="return">
+    <img src="assets/img/back-arrow.png" (click)="return()" id="imgretour"><br>
+    <p class="retour" (click)="return()">Retour</p>
+</div>
+<div class="recherche">
+    <input placeholder="Recherche"  id="recherche">
+</div>
+
+<div *ngIf='loading' id="loading">Loading</div>
+<table id="servicetable">
     <tr>
         <th>IPP</th>
         <th>nom</th>

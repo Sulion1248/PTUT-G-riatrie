@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import {Location} from '@angular/common';
+
 @Component({
   selector: 'app-patient',
   templateUrl: './patient.component.html',
@@ -16,7 +18,8 @@ export class PatientComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private reqsql: Requete) { }
+    private reqsql: Requete,
+    private location: Location) { }
 
   ngOnInit() {
       // tslint:disable-next-line: no-string-literal
@@ -38,5 +41,9 @@ export class PatientComponent implements OnInit {
           }
         }
     });  }
+
+    return(){
+      this.location.back();
+    }
 
 }

@@ -14,13 +14,13 @@ import { AjouterUserComponent } from './ajouter-user/ajouter-user.component';
 import { GrillesComponent } from './grilles/grilles.component';
 
 const appRoutes: Routes = [
-  { path: 'admin', canActivate : [AdminGuard], component: AdminComponent },
-  { path: 'service', canActivate : [GuardGuard], component: ServiceComponent },
-  { path: 'patient/:id', canActivate : [GuardGuard], component: PatientComponent },
-  {path:'gest-comptes', canActivate : [AdminGuard],component:GestComptesComponent},
-  {path:'gest-logs', canActivate : [AdminGuard],component:GestLogsComponent},
-  {path:'ajouter-user', canActivate : [AdminGuard],component:AjouterUserComponent},
-  { path: 'sejour/:id', canActivate : [GuardGuard], component: GrillesComponent },
+  { path: 'admin', /*canActivate : [AdminGuard],*/ component: AdminComponent },
+  { path: 'service', /*canActivate : [GuardGuard],*/ component: ServiceComponent },
+  { path: 'patient/:id', /*canActivate : [GuardGuard],*/ component: PatientComponent },
+  {path:'gest-comptes', /*canActivate : [AdminGuard],*/ component:GestComptesComponent},
+  {path:'gest-logs', /*canActivate : [AdminGuard],*/ component:GestLogsComponent},
+  {path:'ajouter-user', /*canActivate : [AdminGuard],*/ component:AjouterUserComponent},
+  { path: 'sejour/:id', /*canActivate : [GuardGuard],*/ component: GrillesComponent },
   { path: 'identification',  component: IdentificationComponent },
   { path: '',   redirectTo: '/identification', pathMatch: 'full' },
   { path:'gest-comptes',component:GestComptesComponent},
