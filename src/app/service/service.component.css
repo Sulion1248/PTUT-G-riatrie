@@ -18,8 +18,12 @@ td, th{
     float: left;
 }
 
-img:hover, p.retour:hover{
+img:hover, p.retour:hover, .contenu:hover{
     cursor: pointer;
+}
+
+.contenu:hover{
+    font-weight: 900;
 }
 
 #imgretour{
@@ -49,5 +53,5 @@ p.retour{
 tr:first-of-type {
     background: grey;
     font-weight: bold;
-    text-align: center;
   }
+

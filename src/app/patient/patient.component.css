@@ -45,6 +45,26 @@ p.retour{
     margin: -20px auto 20px 100px;
 }
 
+#servicetable{
+    clear: both;
+    margin: 0 auto;
+    width: 85%;
+    background-color: white;
+    padding-bottom: 20px;   
+    border-radius: 5px;
+  }
+
+#servicetable th {
+    border-left: 1px solid grey;
+    margin: auto 5px auto 5px;
+    text-align: center;
+}
+
+#servicetable th:first-child {
+    border-left: none;
+}
+
+
 #actiftable{
     clear: both;
     margin: 0 auto;

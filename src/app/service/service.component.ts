@@ -1,5 +1,6 @@
 import { Requete } from './../requete/requete';
 import { Component, OnInit } from '@angular/core';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-service',
@@ -7,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./service.component.css']
 })
 export class ServiceComponent implements OnInit {
-  liste=([["IPP", "Nom", "Prenom", "Nom de jeune fille", "age", "date entre", "secteur2", "#318ce7"], ["IPP", "Nom", "Prenom", "Nom de jeune fille", "age", "date entre", "secteur1", "#f00000"]]) ;
+  liste=([["IPP", "Nom", "Prenom", "Nom de jeune fille", "DD/MM/YYYY (age)", "date entre", "secteur2", "#318ce7"], ["IPP", "Nom", "Prenom", "Nom de jeune fille", "DD/MM/YYYY (age)", "date entre", "secteur1", "#f00000"]]) ;
   loading: boolean;
   vide = false;
-  constructor( private reqsql: Requete ) {
+  constructor(  private reqsql: Requete,
+                private location: Location ) {
   }
 
   ngOnInit() {
@@ -24,6 +26,10 @@ export class ServiceComponent implements OnInit {
         //this.liste = rep;
       }
   });
+  }
+
+  return(){
+    this.location.back();
   }
 
 }
