@@ -1,6 +1,6 @@
 <p>service works!</p>
 <input placeholder='chercher un patient' (keyup)="onKey($event)" [(ngModel)]="IPP">
-<button (onclick)=navigate()>Valider</button>
+<button (click)='navigate()'>Valider</button>
 <div *ngIf='loading'>Loading</div>
 <table>
     <tr>

@@ -23,6 +23,7 @@ function getsejours(param,res){
   "where Sejour.Patient_idPatient=?";
   console.log("requete : "+req)
   var paramarray = [param];
+  console.log(paramarray);
   reqsql.requetesql(req,paramarray,res); 
 }
 //permet d obtenir tout les patients avec un séjour actif
@@ -34,10 +35,11 @@ function getpatients (res){
   console.log("requete : "+req)
   reqsql.requetesqlsansparam(req,res); 
 }
-function getgrilles (){
-  req='Select Grilleadl.idGrilleADL, Grilleadl.AdlJSON, Grilleadl.Com,  Grilleadl.DateEntre'+
-  'FROM Grilleadl where Grilleadl.Sejour_idSejour=?';
+function getgrilles (param,res){
+  req="Select Grilleadl.idGrilleADL, Grilleadl.AdlJSON, Grilleadl.Com,  Grilleadl.DateEntre "+
+  "FROM Grilleadl where Grilleadl.Sejour_idSejour=?";
   console.log("requete : "+req);
+  var paramarray = [param];
   reqsql.requetesql(req,paramarray,res); 
 }
 exports.getsejours=getsejours;

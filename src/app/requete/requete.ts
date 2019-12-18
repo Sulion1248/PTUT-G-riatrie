@@ -117,6 +117,7 @@ export class Requete {
   }
   getgrilles(idsejour) {
     const promise = new Promise((resolve, reject) => {
+    console.log(this.urlgrilles + '/' + idsejour);
     this.http.get(this.urlgrilles + '/' + idsejour)
     .toPromise()
     .then(
@@ -132,12 +133,13 @@ export class Requete {
             grilles[i].idGrilleADL,
             grilles[i].Com,
             grilles[i].DateEntre,
-            JSON.parse(grilles[i].patientJSON).dependanceHygiene,
-            JSON.parse(grilles[i].patientJSON).dependanceHabillage,
-            JSON.parse(grilles[i].patientJSON).dependanceToilette,
-            JSON.parse(grilles[i].patientJSON).dependanceContinence,
-            JSON.parse(grilles[i].patientJSON).dependanceLocomotion,
-            JSON.parse(grilles[i].patientJSON).dependanceRepas
+            JSON.parse(grilles[i].AdlJSON).dépendanceHygiène,
+            JSON.parse(grilles[i].AdlJSON).dépendanceHabillage,
+            JSON.parse(grilles[i].AdlJSON).dépendanceToilette,
+            JSON.parse(grilles[i].AdlJSON).dépendanceContinence,
+            JSON.parse(grilles[i].AdlJSON).dépendanceLocomotion,
+            JSON.parse(grilles[i].AdlJSON).dépendanceRepas,
+            i
           ]);
         }
           resolve(res);

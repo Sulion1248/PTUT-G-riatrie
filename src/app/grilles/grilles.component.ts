@@ -29,18 +29,20 @@ export class GrillesComponent implements OnInit {
           this.vide = true;
       } else {
         this.grilles = rep;
+        console.log(this.grilles);
+
       }
   });
 }
-plus1(adl) {
-  if (adl < 1) {
-    adl = adl + 0.5;
+plus1(numero, num) {
+  if (this.grilles[numero][num] < 1) {
+    this.grilles[numero][num] = this.grilles[numero][num] + 0.5;
   }
 }
 
-moins1(adl) {
-  if (adl > 0) {
-    adl = adl - 0.5;
+moins1(numero, num) {
+  if (this.grilles[numero][num] > 0) {
+    this.grilles[numero][num] = this.grilles[numero][num] - 0.5;
   }
 }
 
