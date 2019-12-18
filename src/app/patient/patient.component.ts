@@ -1,8 +1,6 @@
 import { Requete } from './../requete/requete';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
-import { switchMap } from 'rxjs/operators';
-import { Observable } from 'rxjs';
 import {Location} from '@angular/common';
 
 @Component({
@@ -42,8 +40,8 @@ export class PatientComponent implements OnInit {
         }
     });  }
 
-    return(){
-      this.location.back();
+    return() {
+      this.router.navigate(['/service']);
     }
 
 }

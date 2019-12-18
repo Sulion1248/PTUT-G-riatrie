@@ -8,9 +8,9 @@ import {Location} from '@angular/common';
   styleUrls: ['./service.component.css']
 })
 export class ServiceComponent implements OnInit {
-  liste=([["IPP", "Nom", "Prenom", "Nom de jeune fille", "DD/MM/YYYY (age)", "date entre", "secteur2", "#318ce7"], ["IPP", "Nom", "Prenom", "Nom de jeune fille", "DD/MM/YYYY (age)", "date entre", "secteur1", "#f00000"]]) ;
   loading: boolean;
   vide = false;
+  liste: unknown;
   constructor(  private reqsql: Requete,
                 private location: Location ) {
   }
@@ -23,12 +23,12 @@ export class ServiceComponent implements OnInit {
         if (rep === 'vide') {
           this.vide = true;
       } else {
-        //this.liste = rep;
+        this.liste = rep;
       }
   });
   }
 
-  return(){
+  return() {
     this.location.back();
   }
 

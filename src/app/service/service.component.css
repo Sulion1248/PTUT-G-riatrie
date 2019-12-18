@@ -23,7 +23,7 @@ img:hover, p.retour:hover, .contenu:hover{
 }
 
 .contenu:hover{
-    font-weight: 900;
+    background-color: rgb(219, 219, 219);
 }
 
 #imgretour{
